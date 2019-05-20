@@ -1,0 +1,20 @@
+{
+	"name": "ricschat",
+	"version": "1.0.0",
+	"description": "Simple chat app using sockets",
+	"main": "server.js",
+	"scripts": {
+		"start": "nodemon server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.16.4",
+		"mongodb": "^2.2.30",
+		"mongoose": "^5.5.2",
+		"socket.io": "^2.2.0"
+	},
+	"devDependencies": {
+		"nodemon": "^1.18.11"
+	}
+}
