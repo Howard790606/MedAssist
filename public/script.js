@@ -8,9 +8,10 @@ const status = element("status");
 const messages = element("messages");
 const textarea = element("textarea");
 const username = element("username");
+const userid = element("userid");
 const clearBtn = element("clear");
 
-username.focus(); //網頁一打開就先focus在username
+userid.focus(); //網頁一打開就先focus在username
 
 
 // Setting default status
@@ -40,7 +41,7 @@ if (socket !== undefined) {
             // Building out message div
             const message = document.createElement("div");
             message.setAttribute("class", "chat-message");
-            message.textContent = data[x].name + ": " + data[x].body;
+            message.textContent = data[x].name + ": " + data[x].body + " added by " + data[x].nameid;
             messages.appendChild(message);
             //            messages.insertBefore(message, messages.firstChild)
         }
@@ -49,7 +50,8 @@ if (socket !== undefined) {
     const clearList = () => {
         messages.textContent = "";
         username.value = "";
-        username.focus();
+        userid.value = "";
+        userid.focus();
     };
 
     // Handling initialization
@@ -78,7 +80,8 @@ if (socket !== undefined) {
             // Emit to server input
             socket.emit("input", {
                 name: username.value,
-                body: textarea.value
+                body: textarea.value,
+                nameid: userid.value 
             });
 
             event.preventDefault();

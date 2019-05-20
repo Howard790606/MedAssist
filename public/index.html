@@ -10,7 +10,7 @@
             integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
             crossorigin="anonymous"
         />
-        <title>Ric's Chat</title>
+        <title>MedAssist</title>
         <style>
             #messages {
                 height: 300px;
@@ -20,11 +20,13 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-6 offset-md-3 col-sm-12">
+                <div class="col-md-8 offset-md-2 col-sm-12">
                     <h1 class="text-center">
-                        Ric's Chat
+                        MedAssist
                         <button id="clear" class="btn btn-danger">Clear</button>
                     </h1>
+                    <p class="text-center">Let's make some medical notes online!!!</p>
+                    <p class="text-center"> Submit your medical notes right now!</p>
                     <div id="chat">
                         <div class="card">
                             <div
@@ -36,15 +38,22 @@
                         <br />
                         <input
                             type="text"
-                            id="username"
+                            id="userid"
                             class="form-control"
                             placeholder="Enter name..."
+                        />
+                        <br />
+                        <input
+                            type="text"
+                            id="username"
+                            class="form-control"
+                            placeholder="Enter topic..."
                         />
                         <br />
                         <textarea
                             id="textarea"
                             class="form-control"
-                            placeholder="Enter message..."
+                            placeholder="Enter notes..."
                         ></textarea>
                     </div>
                     <div id="status"></div>
