@@ -9,11 +9,11 @@ npm start 開啟前端及後端伺服器(任何ip位址皆可連至mongodb)
 其他說明
 
 使用與參考之框架/模組/原始碼  
-Html, CSS, bootstrap
-Javascript
-Express
-Mongodb
-Ric's chatbox template
+Html, CSS, bootstrap  
+Javascript  
+Express  
+Mongodb  
+Ric's chatbox template  
 
 我的貢獻
 
