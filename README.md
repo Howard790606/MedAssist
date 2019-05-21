@@ -2,6 +2,8 @@
 
 MedAssist: This project is aimed to provide a plateform for clinical notes online. Visitors can browse through useful information for clinical use and add or revise the contents on the website supported by a backend system. Clinicians may find it practical for daily use!
 
+![image](https://raw.githubusercontent.com/Howard790606/MedAssist/master/pic1.png)
+
 使用/操作方式  
 npm install 安裝需要的dependencies  
 npm start 開啟前端及後端伺服器(任何ip位址皆可連至mongodb)
