@@ -41,7 +41,7 @@ if (socket !== undefined) {
             // Building out message div
             const message = document.createElement("div");
             message.setAttribute("class", "chat-message");
-            message.textContent = data[x].name + ": " + data[x].body + " added by " + data[x].nameid;
+            message.textContent = data[x].name + ": " + data[x].body+ " added"; 
             messages.appendChild(message);
             //            messages.insertBefore(message, messages.firstChild)
         }
@@ -79,9 +79,9 @@ if (socket !== undefined) {
         if (event.which === 13 && event.shiftKey == false) {
             // Emit to server input
             socket.emit("input", {
+                // nameid: userid.value,
                 name: username.value,
-                body: textarea.value,
-                nameid: userid.value 
+                body: textarea.value 
             });
 
             event.preventDefault();

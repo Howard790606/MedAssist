@@ -10,6 +10,11 @@
             integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
             crossorigin="anonymous"
         />
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
         <title>MedAssist</title>
         <style>
             #messages {
@@ -20,7 +25,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-8 offset-md-2 col-sm-12">
+                <div class="col-md-10 offset-md-1 col-sm-12">
                     <h1 class="text-center">
                         MedAssist
                         <button id="clear" class="btn btn-danger">Clear</button>
@@ -57,11 +62,60 @@
                         ></textarea>
                     </div>
                     <div id="status"></div>
+
+                    <br>
+                    <div class="form-group">
+                        <select id="food">
+                            <option value="red" selected>red</option>
+                            <option value="blue">blue</option>
+                            <option value="green">green</option>
+                        </select>
+                        <input type="text" class="form-control" id="things" width=40px placeholder="New list...">
+                    </div>
+
+                    <!-- <ul class="list-group">
+                        <li class="list-group-item">A latest article has been published on NEJM</li>
+                        <li class="list-group-item">Second item</li>
+                        <li class="list-group-item">Third item</li>
+                    </ul> -->
+                    <div id="to-do-list">
+                    </div>  
+                    <p></p>
+                    <input type="hidden" id="editing-doc-id">
+            
+                    <!-- 新增按鈕 -->
+                    <button type="button" class="btn btn-primary" id="add-data-btn">Add new medical issue</button> 
+                    <p class="text-center">Powered by Howard Lu, last updated in 2019/05</p>
                 </div>
-            </div>
+            </div> 
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        
         <script src="script.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+
+        <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqTkSQDBCjpgp-rEDmGHTbKHaX_QkLNas",
+            authDomain: "js-307-bc102.firebaseapp.com",
+            databaseURL: "https://js-307-bc102.firebaseio.com",
+            projectId: "js-307-bc102",
+            storageBucket: "js-307-bc102.appspot.com",
+            messagingSenderId: "1072069387127",
+            appId: "1:1072069387127:web:f412c50957cec480"
+        };
+        firebase.initializeApp(firebaseConfig);
+        var dbb = firebase.firestore();
+        </script>
+        <script src="./index.js"></script>
     </body>
 </html>
