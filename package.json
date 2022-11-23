@@ -14,7 +14,7 @@
 		"jquery": "^3.4.1",
 		"mongodb": "^2.2.30",
 		"mongoose": "^5.5.2",
-		"socket.io": "^2.2.0"
+		"socket.io": "^2.5.0"
 	},
 	"devDependencies": {
 		"nodemon": "^1.18.11"
